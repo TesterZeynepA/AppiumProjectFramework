@@ -13,8 +13,18 @@ public class ProductsPage {
 
     By popup = By.id("trendyol.com:id/textViewTooltipTitle");
 
-    public void checkProduct(){
+    By popupClose = By.id("trendyol.com:id/imageViewTooltipClose");
+
+    By product = By.id("trendyol.com:id/edittext_search_view");
+
+    public void checkPopUp(){
         Assert.assertTrue(driver.findElement(popup).isDisplayed());
     }
+
+    public void checkProduct(){
+        driver.findElement(popupClose).click();
+        Assert.assertTrue(driver.findElement(product).getText().contains("İphone"));
+    }
+
 
 }

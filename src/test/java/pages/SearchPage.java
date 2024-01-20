@@ -15,8 +15,11 @@ public class SearchPage {
     By searchBar = By.id("trendyol.com:id/edittext_search_view");
 
 
-    public void clickSearchButtonOnKeyboard() {
+    public void search(String str) {
+        driver.findElement(searchBar).sendKeys(str);
         driver.pressKey(new KeyEvent(AndroidKey.SEARCH));
     }
+
+
 }
 

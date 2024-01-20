@@ -20,15 +20,17 @@ public class HomePage {
     public void checkPopUpMessage(){
         Assert.assertTrue(driver.findElement(popupText).isDisplayed());
     }
+    public void checkText(){
+        String str="Sana Özel Ürün ve Koleksiyonları Keşfet!";
+        Assert.assertEquals(driver.findElement(popupText).getText(),str);
+    }
 
     public void closePopUpMessage(){
         driver.findElement(popupCloseButton).click();
     }
 
-    public void selectSearchBarAndSearchIphone(){
+    public void selectSearchBar(){
         driver.findElement(searchBar).click();
-        driver.findElement(searchBar).sendKeys("iphone");
-        driver.pressKey(new KeyEvent(AndroidKey.SEARCH));
     }
 
 }
