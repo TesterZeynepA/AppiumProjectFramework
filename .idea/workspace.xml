@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8053d83-847b-4c78-9e7f-46904be4195d" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" afterDir="false" />
+    <list default="true" id="d8053d83-847b-4c78-9e7f-46904be4195d" name="Changes" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UsageOfReusableMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FirstTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/ReusableMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.FirstTest.dortTestTekMethod">
+  <component name="RunManager" selected="TestNG.UsageOfReusableMethods.test2">
     <configuration name="FirstTest.dortTestTekMethod" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AppiumProjectFramework" />
       <extension name="coverage">
@@ -56,24 +54,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
       <option name="METHOD_NAME" value="dortTestTekMethod" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.test1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AppiumProjectFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
-      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -117,12 +97,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsageOfReusableMethods.test1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AppiumProjectFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsageOfReusableMethods" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsageOfReusableMethods.test2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AppiumProjectFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsageOfReusableMethods" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UsageOfReusableMethods.test2" />
+        <item itemvalue="TestNG.UsageOfReusableMethods.test1" />
         <item itemvalue="TestNG.FirstTest.dortTestTekMethod" />
         <item itemvalue="TestNG.FirstTest.test4" />
         <item itemvalue="TestNG.FirstTest.test3" />
-        <item itemvalue="TestNG.FirstTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -142,11 +159,19 @@
       <option name="project" value="LOCAL" />
       <updated>1705774667891</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second commit">
+      <created>1705779091313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705779091313</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>
