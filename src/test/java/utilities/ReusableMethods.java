@@ -128,9 +128,9 @@ public class ReusableMethods {
     }
     public void scrollDown() {
         int startX = driver.manage().window().getSize().getWidth() / 2; //250
-        int startY = driver.manage().window().getSize().getHeight() * 3 / 4; //1500
+        int startY = driver.manage().window().getSize().getHeight() * 4 / 5; //1500
         int endx = driver.manage().window().getSize().getWidth() / 2; //250
-        int endy = driver.manage().window().getSize().getHeight() * 1 / 4; //500
+        int endy = driver.manage().window().getSize().getHeight() / 5; //500
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "parmak");
         Sequence scroll = new Sequence(finger, 0);
@@ -143,9 +143,9 @@ public class ReusableMethods {
 
     public void scrollUp() {
         int startX = driver.manage().window().getSize().getWidth() / 2; //250
-        int startY = driver.manage().window().getSize().getHeight() * 1 / 4; //500
+        int startY = driver.manage().window().getSize().getHeight() / 5; //500
         int endx = driver.manage().window().getSize().getWidth() / 2; //250
-        int endy = driver.manage().window().getSize().getHeight() * 3 / 4; //1500
+        int endy = driver.manage().window().getSize().getHeight() * 4 / 5; //1500
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "parmak");
         Sequence scroll = new Sequence(finger, 0);
@@ -157,9 +157,9 @@ public class ReusableMethods {
     }
 
     public void swipeRight() {
-        int startX = driver.manage().window().getSize().getWidth() * 1 / 4; //100
+        int startX = driver.manage().window().getSize().getWidth()/ 5; //100
         int startY = driver.manage().window().getSize().getHeight() / 2; //1000
-        int endx = driver.manage().window().getSize().getWidth() * 3 / 4; //400
+        int endx = driver.manage().window().getSize().getWidth() * 4 / 5; //400
         int endy = driver.manage().window().getSize().getHeight() / 2; //1000
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "sdadsaads");
@@ -172,9 +172,9 @@ public class ReusableMethods {
     }
 
     public void swipeLeft() {
-        int startX = driver.manage().window().getSize().getWidth() * 3 / 4; //400
+        int startX = driver.manage().window().getSize().getWidth() * 4 / 5; //400
         int startY = driver.manage().window().getSize().getHeight() / 2; //1000
-        int endx = driver.manage().window().getSize().getWidth() * 1 / 4; //100
+        int endx = driver.manage().window().getSize().getWidth() / 5; //100
         int endy = driver.manage().window().getSize().getHeight() / 2; //1000
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "parmak");
@@ -199,18 +199,18 @@ public class ReusableMethods {
         int startX = element.getRect().getX() + element.getSize().getWidth() / 2; //250
         int startY = element.getRect().getY() + element.getSize().getHeight() * 3 / 4; //1500
         int endx = element.getRect().getX() + element.getSize().getWidth() / 2; //250
-        int endy = element.getRect().getY() + element.getSize().getHeight() * 1 / 4; //500
+        int endy = element.getRect().getY() + element.getSize().getHeight() / 4; //500
         baseScrollMethod(startX, startY, endx, endy);
     }
     public void swipeLeftInElement(By by) {
         WebElement element = driver.findElement(by);
         int startX = element.getRect().getX() + element.getSize().getWidth() * 3 / 4; //250
         int startY = element.getRect().getY() + element.getSize().getHeight() / 2; //1500
-        int endx = element.getRect().getX() + element.getSize().getWidth() * 1 / 4; //250
+        int endx = element.getRect().getX() + element.getSize().getWidth() / 4; //250
         int endy = element.getRect().getY() + element.getSize().getHeight() / 2; //500
         baseScrollMethod(startX, startY, endx, endy);
     }
-    public void finalScrollMethod(AppiumBy by){
+    public void finalScrollMethod(By by){
         // elementi buldumu bulmadı mı kontrol ediyorum. eğer elementi bulduysa false a çekiyor. bu sayede while dan çıkabiliyorum.
         boolean check = true;
         // sayfanın en sonundamıyım kontrol etmek için kullanıyorum. Şuanki page source u alıp daha kaydırdıktan sonraki page source ile kıyaslamak için.
@@ -251,7 +251,7 @@ public class ReusableMethods {
     }
 
 
-    public void scrollUntilFindElement(AppiumBy by) {
+    public void scrollUntilFindElement(AppiumBy by) throws InterruptedException {
         boolean check = true;
         String pageSourceBeforeScrolling = driver.getPageSource();
         String pageSourceAfterScrolling;
@@ -266,6 +266,7 @@ public class ReusableMethods {
             }
             if (element != null) {
                 check = false;
+                element.getText();
             } else {
                 scrollDown();
                 pageSourceAfterScrolling = driver.getPageSource();
@@ -276,6 +277,7 @@ public class ReusableMethods {
                 }
             }
             i++;
+            Thread.sleep(2000);
         } while (check);
     }
 }
